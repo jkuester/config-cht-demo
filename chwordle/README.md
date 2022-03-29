@@ -22,6 +22,7 @@ This form uses several xPath functions that are not available in versions of the
 - Dynamically calculated `repeat_count` values
 - `position` (for checking the current index in a `repeat`)
 - `once` (for randomizing the mystery word only once per game)
+- `count-non-empty` (for finding how many guesses have been made)
 
 For best results, deploy this form on a CHT instance running the [`6345-enketo-uplift`](https://github.com/medic/cht-core/tree/6345-enketo-uplift) branch.
 
