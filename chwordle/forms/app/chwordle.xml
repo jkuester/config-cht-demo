@@ -12,7 +12,7 @@
         </translation>
       </itext>
       <instance>
-        <chwordle id="chwordle" prefix="J1!chwordle!" delimiter="#" version="2022-03-02 00:00:00">
+        <chwordle id="chwordle" prefix="J1!chwordle!" delimiter="#" version="2022-03-29 00:00:00">
           <index/>
           <word/>
           <word_0/>
@@ -56,7 +56,6 @@
               <sorry/>
               <answer/>
             </failed_notes>
-            <page_number/>
             <solved/>
             <guess_0/>
             <guess_1/>
@@ -96,7 +95,7 @@
       <bind nodeset="/chwordle/page_start/welcome" readonly="true()" type="string"/>
       <bind nodeset="/chwordle/page_start/rules" readonly="true()" type="string"/>
       <bind nodeset="/chwordle/already_solved" type="string" calculate="sum( /chwordle/guesses/solved )"/>
-      <bind nodeset="/chwordle/page_count" type="string" calculate="sum( /chwordle/guesses/page_number )"/>
+      <bind nodeset="/chwordle/page_count" type="string" calculate="count-non-empty( /chwordle/guesses/guess )"/>
       <bind nodeset="/chwordle/guesses_count" type="string" readonly="true()" calculate="if( /chwordle/already_solved  = 0, 7,  /chwordle/page_count  + 1)"/>
       <bind nodeset="/chwordle/guesses/results_count" type="string" readonly="true()" calculate="position(..) - 1"/>
       <bind nodeset="/chwordle/guesses/results/result_0_green" type="string" calculate="indexed-repeat( /chwordle/guesses/guess_0_green ,  /chwordle/guesses , position(..))"/>
@@ -115,13 +114,12 @@
       <bind nodeset="/chwordle/guesses/results/result_4_grey" type="string" calculate="indexed-repeat( /chwordle/guesses/guess_4_grey ,  /chwordle/guesses , position(..))"/>
       <bind nodeset="/chwordle/guesses/results/result_4_yellow" type="string" calculate="indexed-repeat( /chwordle/guesses/guess_4_yellow ,  /chwordle/guesses , position(..))"/>
       <bind nodeset="/chwordle/guesses/results/result" readonly="true()" type="string"/>
-      <bind nodeset="/chwordle/guesses/guess" type="string" jr:constraintMsg="Enter a 5 letter word (ALL CAPS)" required="true()" constraint="regex(., '^[A-Z]{5}$')" relevant="position(..) &lt; 7 and ( /chwordle/already_solved  = 0 or  /chwordle/guesses/guess  != '')"/>
+      <bind nodeset="/chwordle/guesses/guess" type="string" required="true()" constraint="regex(., '^[A-Z]{5}$')" relevant="position(..) &lt; 7 and ( /chwordle/already_solved  = 0 or  /chwordle/guesses/guess  != '')" jr:constraintMsg="Enter a 5 letter word (ALL CAPS)"/>
       <bind nodeset="/chwordle/guesses/solved_notes" relevant=" /chwordle/already_solved  != 0 and  /chwordle/guesses/guess  = ''"/>
       <bind nodeset="/chwordle/guesses/solved_notes/congrats" readonly="true()" type="string"/>
       <bind nodeset="/chwordle/guesses/failed_notes" relevant=" /chwordle/already_solved  = 0 and position(..) = 7"/>
       <bind nodeset="/chwordle/guesses/failed_notes/sorry" readonly="true()" type="string"/>
       <bind nodeset="/chwordle/guesses/failed_notes/answer" readonly="true()" type="string"/>
-      <bind nodeset="/chwordle/guesses/page_number" type="string" calculate="if( /chwordle/guesses/guess  = '', 0, 1)"/>
       <bind nodeset="/chwordle/guesses/solved" type="string" calculate="if( /chwordle/guesses/guess  =  /chwordle/word , 1, 0)"/>
       <bind nodeset="/chwordle/guesses/guess_0" type="string" calculate="substr( /chwordle/guesses/guess , 0, 1)"/>
       <bind nodeset="/chwordle/guesses/guess_1" type="string" calculate="substr( /chwordle/guesses/guess , 1, 2)"/>
@@ -4167,7 +4165,7 @@ Try to guess the 5-letter mystery word. Enter your guess into the text box using
     </group>
     <group ref="/chwordle/guesses">
       <label></label>
-      <repeat nodeset="/chwordle/guesses" appearance="field-list" jr:count=" /chwordle/guesses_count ">
+      <repeat nodeset="/chwordle/guesses" jr:count=" /chwordle/guesses_count " appearance="field-list">
         <group ref="/chwordle/guesses/results">
           <label></label>
           <repeat nodeset="/chwordle/guesses/results" jr:count=" /chwordle/guesses/results_count ">
