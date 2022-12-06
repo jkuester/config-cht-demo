@@ -239,6 +239,16 @@
               <current_name/>
               <current_length/>
               <current_weight/>
+              <current_danger_signs/>
+              <current_infected_umbilical_cord/>
+              <current_convulsion/>
+              <current_difficulty_feeding/>
+              <current_vomit/>
+              <current_drowsy/>
+              <current_stiff/>
+              <current_yellow_skin/>
+              <current_fever/>
+              <current_blue_skin/>
               <r_baby_header/>
               <r_baby_length/>
               <r_baby_weight/>
@@ -489,20 +499,20 @@ selected(../vaginal_bleeding, 'yes') or
 selected(../vaginal_discharge, 'yes') or
 selected(../convulsion, 'yes'), 'yes', 'no')"/>
       <bind nodeset="/delivery_plus_plus/delivery_outcome" relevant="not(selected(../woman/condition/woman_outcome, 'deceased'))"/>
-      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_date" type="date" required="true()" constraint=". &lt;= now() and difference-in-months( ., today() ) &lt; 1" jr:constraintMsg="Date cannot be in the future and older than a month from today."/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_date" type="date" required="true()" jr:constraintMsg="Date cannot be in the future and older than a month from today." constraint=". &lt;= now() and difference-in-months( ., today() ) &lt; 1"/>
       <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_place" type="select1" required="true()"/>
-      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_place_other" type="string" relevant="../delivery_place = 'other'" required="true()" constraint="string-length(.) &lt;= 100" jr:constraintMsg="Maximum 100 characters allowed."/>
-      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_mode" type="select1" relevant="../delivery_place = 'health_facility'" required="true()"/>
-      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_conductor" type="select1" relevant="../delivery_place = 'home' or ../delivery_place = 'other'" required="true()"/>
-      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_conductor_other" type="string" relevant="../delivery_conductor = 'other'" required="true()" constraint="string-length(.) &lt;= 100" jr:constraintMsg="Maximum 100 characters allowed."/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_place_other" type="string" required="true()" jr:constraintMsg="Maximum 100 characters allowed." relevant="../delivery_place = 'other'" constraint="string-length(.) &lt;= 100"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_mode" type="select1" required="true()" relevant="../delivery_place = 'health_facility'"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_conductor" type="select1" required="true()" relevant="../delivery_place = 'home' or ../delivery_place = 'other'"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_conductor_other" type="string" required="true()" jr:constraintMsg="Maximum 100 characters allowed." relevant="../delivery_conductor = 'other'" constraint="string-length(.) &lt;= 100"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat_count" type="string" readonly="true()" calculate="if( /delivery_plus_plus/babies_delivered_num  = 0 or  /delivery_plus_plus/baby_repeat [position()= /delivery_plus_plus/babies_delivered_num ]/baby_danger_signs/more_babies = 'yes',  /delivery_plus_plus/babies_delivered_num  + 1,  /delivery_plus_plus/babies_delivered_num )"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/baby_condition" type="select1" required="true()"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/baby_name" type="string" required="true()"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/baby_sex" type="select1" required="true()"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_weight_know" type="select1" required="true()"/>
-      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_weight" type="int" relevant="selected(../birth_weight_know, 'yes')" required="true()" constraint=". &gt;= 1500 and . &lt;= 5000" jr:constraintMsg="Should be between 1500 grams and 5000 grams."/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_weight" type="int" required="true()" jr:constraintMsg="Should be between 1500 grams and 5000 grams." relevant="selected(../birth_weight_know, 'yes')" constraint=". &gt;= 1500 and . &lt;= 5000"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_length_know" type="select1" required="true()"/>
-      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_length" type="decimal" relevant="selected(../birth_length_know, 'yes')" required="true()" constraint=". &gt;= 35.6 and . &lt;= 70" jr:constraintMsg="Should be between 35.6 cms and 70 cms."/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_length" type="decimal" required="true()" jr:constraintMsg="Should be between 35.6 cms and 70 cms." relevant="selected(../birth_length_know, 'yes')" constraint=". &gt;= 35.6 and . &lt;= 70"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/vaccines_received" type="select1" required="true()"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/imm_counsel_note" readonly="true()" type="string" relevant="selected(../vaccines_received, 'none')"/>
       <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/breastfeeding" type="select1" required="true()"/>
@@ -539,7 +549,7 @@ selected(../woman/condition/woman_outcome, 'alive_unwell') or
  /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
       <bind nodeset="/delivery_plus_plus/pnc_visits/who_note" readonly="true()" type="string"/>
       <bind nodeset="/delivery_plus_plus/pnc_visits/pnc_visits_attended" type="select" constraint="not(selected(.,'none')) or count-selected(.) &lt; 2"/>
-      <bind nodeset="/delivery_plus_plus/pnc_visits/pnc_visits_additional" type="int" constraint=". &gt;=0 and . &lt;= 6" jr:constraintMsg="Must be between 0 and 6."/>
+      <bind nodeset="/delivery_plus_plus/pnc_visits/pnc_visits_additional" type="int" jr:constraintMsg="Must be between 0 and 6." constraint=". &gt;=0 and . &lt;= 6"/>
       <bind nodeset="/delivery_plus_plus/pnc_visits/days" type="string" calculate="floor(decimal-date-time(today()) - decimal-date-time( /delivery_plus_plus/delivery_outcome/delivery_date ))"/>
       <bind nodeset="/delivery_plus_plus/summary/r_submit_note" readonly="true()" type="string"/>
       <bind nodeset="/delivery_plus_plus/summary/r_summary_details" readonly="true()" type="string"/>
@@ -575,19 +585,29 @@ selected(../../woman/condition/woman_outcome, 'alive_unwell') or
       <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_name" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_details/baby_name ,  /delivery_plus_plus/baby_repeat , position(..))"/>
       <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_length" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_details/birth_length ,  /delivery_plus_plus/baby_repeat , position(..))"/>
       <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_weight" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_details/birth_weight ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_danger_signs" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/r_baby_danger_sign_present ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_infected_umbilical_cord" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/infected_umbilical_cord ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_convulsion" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/b_convulsion ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_difficulty_feeding" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/difficulty_feeding ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_vomit" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/vomit ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_drowsy" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/drowsy ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_stiff" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/stiff ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_yellow_skin" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/yellow_skin ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_fever" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/b_fever ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_blue_skin" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/blue_skin ,  /delivery_plus_plus/baby_repeat , position(..))"/>
       <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_baby_header" readonly="true()" type="string"/>
       <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_baby_length" readonly="true()" type="string"/>
       <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_baby_weight" readonly="true()" type="string"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_danger_signs" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/r_baby_danger_sign_present ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_infected_umbilical_cord" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/infected_umbilical_cord ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_convulsion" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/b_convulsion ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_difficulty_feeding" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/difficulty_feeding ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_vomit" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/vomit ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_drowsy" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/drowsy ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_stiff" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/stiff ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_yellow_skin" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/yellow_skin ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_fever" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/b_fever ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
-      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_blue_skin" readonly="true()" type="string" relevant="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/blue_skin ,  /delivery_plus_plus/baby_repeat , position(..)) = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_danger_signs" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_danger_signs  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_infected_umbilical_cord" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_infected_umbilical_cord  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_convulsion" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_convulsion  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_difficulty_feeding" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_difficulty_feeding  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_vomit" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_vomit  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_drowsy" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_drowsy  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_stiff" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_stiff  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_yellow_skin" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_yellow_skin  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_fever" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_fever  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_blue_skin" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_blue_skin  = 'yes'"/>
       <bind nodeset="/delivery_plus_plus/summary/r_referrals" readonly="true()" type="string" relevant="not(selected(../../woman/condition/woman_outcome, 'deceased')) or
  /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
       <bind nodeset="/delivery_plus_plus/summary/r_refer_clinic_immediately" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes' or
