@@ -1,0 +1,1228 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Delivery++</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/delivery_plus_plus/baby_repeat/baby_danger_signs/more_babies/no:label">
+            <value form="image">jr://images/babies_no.png</value>
+          </text>
+          <text id="/delivery_plus_plus/baby_repeat/baby_danger_signs/more_babies/yes:label">
+            <value form="image">jr://images/babies_yes.png</value>
+          </text>
+          <text id="static_instance-conductors-0">
+            <value>Skilled health care provider</value>
+          </text>
+          <text id="static_instance-conductors-1">
+            <value>Traditional birth attendant</value>
+          </text>
+          <text id="static_instance-conductors-2">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-knows_length-0">
+            <value>I don't know</value>
+          </text>
+          <text id="static_instance-knows_length-1">
+            <value>Length in cm</value>
+          </text>
+          <text id="static_instance-knows_weight-0">
+            <value>I don't know</value>
+          </text>
+          <text id="static_instance-knows_weight-1">
+            <value>Weight in grams</value>
+          </text>
+          <text id="static_instance-life_conditions_baby-0">
+            <value>Alive and well</value>
+          </text>
+          <text id="static_instance-life_conditions_baby-1">
+            <value>Alive and unwell</value>
+          </text>
+          <text id="static_instance-life_conditions_baby-2">
+            <value>Deceased</value>
+          </text>
+          <text id="static_instance-life_conditions_woman-0">
+            <value>Alive and well</value>
+          </text>
+          <text id="static_instance-life_conditions_woman-1">
+            <value>Alive and unwell</value>
+          </text>
+          <text id="static_instance-life_conditions_woman-2">
+            <value>Deceased</value>
+          </text>
+          <text id="static_instance-male_female-0">
+            <value>Male</value>
+          </text>
+          <text id="static_instance-male_female-1">
+            <value>Female</value>
+          </text>
+          <text id="static_instance-modes-0">
+            <value>Vaginal</value>
+          </text>
+          <text id="static_instance-modes-1">
+            <value>Cesarean</value>
+          </text>
+          <text id="static_instance-more_babies-0">
+            <value form="image">jr://images/babies_yes.png</value>
+          </text>
+          <text id="static_instance-more_babies-1">
+            <value form="image">jr://images/babies_no.png</value>
+          </text>
+          <text id="static_instance-places-0">
+            <value>Health facility</value>
+          </text>
+          <text id="static_instance-places-1">
+            <value>Home</value>
+          </text>
+          <text id="static_instance-places-2">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-pnc_visits-0">
+            <value>Within 24 hours (check this box if facility delivery)</value>
+          </text>
+          <text id="static_instance-pnc_visits-1">
+            <value>3 days</value>
+          </text>
+          <text id="static_instance-pnc_visits-2">
+            <value>7 days</value>
+          </text>
+          <text id="static_instance-pnc_visits-3">
+            <value>6 weeks</value>
+          </text>
+          <text id="static_instance-pnc_visits-4">
+            <value>None of the above</value>
+          </text>
+          <text id="static_instance-vaccines-0">
+            <value>BCG only</value>
+          </text>
+          <text id="static_instance-vaccines-1">
+            <value>Birth Polio only</value>
+          </text>
+          <text id="static_instance-vaccines-2">
+            <value>BCG and Birth Polio</value>
+          </text>
+          <text id="static_instance-vaccines-3">
+            <value>None</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <delivery_plus_plus id="delivery_plus_plus" prefix="J1!delivery_plus_plus!" delimiter="#" version="2022-12-06 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source>user</source>
+            <source_id/>
+            <contact>
+              <_id/>
+              <name/>
+              <short_name/>
+              <patient_id/>
+              <date_of_birth/>
+              <sex/>
+            </contact>
+          </inputs>
+          <patient_short_name_start tag="hidden"/>
+          <patient_age_in_years/>
+          <patient_name/>
+          <r_baby_danger_sign_present_joined/>
+          <r_baby_danger_sign_present_any/>
+          <babies_delivered_num/>
+          <woman>
+            <condition>
+              <woman_outcome/>
+            </condition>
+            <pnc_danger_sign_check>
+              <pnc_danger_sign_note tag="hidden"/>
+              <pnc_danger_sign_table tag="hidden"/>
+              <fever/>
+              <severe_headache/>
+              <vaginal_bleeding/>
+              <vaginal_discharge/>
+              <convulsion/>
+              <r_pnc_danger_sign_present/>
+            </pnc_danger_sign_check>
+          </woman>
+          <delivery_outcome>
+            <delivery_date/>
+            <delivery_place/>
+            <delivery_place_other/>
+            <delivery_mode/>
+            <delivery_conductor/>
+            <delivery_conductor_other/>
+          </delivery_outcome>
+          <baby_repeat_count/>
+          <baby_repeat jr:template="">
+            <baby_details>
+              <baby_condition/>
+              <baby_name/>
+              <baby_sex/>
+              <birth_weight_know/>
+              <birth_weight/>
+              <birth_length_know/>
+              <birth_length/>
+              <vaccines_received/>
+              <imm_counsel_note tag="hidden"/>
+              <breastfeeding/>
+              <breastfed_within_1_hour/>
+            </baby_details>
+            <baby_danger_signs>
+              <baby_danger_sign_note tag="hidden"/>
+              <baby_danger_sign_table/>
+              <infected_umbilical_cord/>
+              <b_convulsion/>
+              <difficulty_feeding/>
+              <vomit/>
+              <drowsy/>
+              <stiff/>
+              <yellow_skin/>
+              <b_fever/>
+              <blue_skin/>
+              <r_baby_danger_sign_present/>
+              <more_babies/>
+            </baby_danger_signs>
+          </baby_repeat>
+          <safe_postnatal_practices>
+            <safe_postnatal_practice_1/>
+            <safe_postnatal_practice_2/>
+            <safe_postnatal_practice_3/>
+            <safe_postnatal_practice_4/>
+            <safe_postnatal_practice_5/>
+          </safe_postnatal_practices>
+          <pnc_visits>
+            <who_note/>
+            <pnc_visits_attended/>
+            <pnc_visits_additional/>
+            <days/>
+          </pnc_visits>
+          <summary>
+            <r_submit_note/>
+            <r_summary_details/>
+            <r_patient_details/>
+            <r_pregnancy_outcome/>
+            <r_woman_condition/>
+            <r_condition_well/>
+            <r_condition_unwell/>
+            <r_delivery_details/>
+            <r_delivery_date/>
+            <r_delivery_place/>
+            <r_babies_delivered_num/>
+            <r_danger_signs/>
+            <r_mom_fever/>
+            <r_mom_severe_headache/>
+            <r_mom_vaginal_bleeding/>
+            <r_mom_vaginal_discharge/>
+            <r_mom_convulsion/>
+            <r_pnc_visits/>
+            <r_pnc_visits_completed/>
+            <r_pnc_visit_24hrs/>
+            <r_pnc_visit_3days/>
+            <r_pnc_visit_7days/>
+            <r_pnc_visit_6weeks/>
+            <r_pnc_visit_none/>
+            <r_pnc_visits_add/>
+            <r_babies/>
+            <r_babies_repeat_count/>
+            <r_babies_repeat jr:template="">
+              <current_name/>
+              <current_length/>
+              <current_weight/>
+              <current_danger_signs/>
+              <current_infected_umbilical_cord/>
+              <current_convulsion/>
+              <current_difficulty_feeding/>
+              <current_vomit/>
+              <current_drowsy/>
+              <current_stiff/>
+              <current_yellow_skin/>
+              <current_fever/>
+              <current_blue_skin/>
+              <r_baby_header/>
+              <r_baby_length/>
+              <r_baby_weight/>
+              <r_danger_signs/>
+              <r_infected_umbilical_cord/>
+              <r_convulsion/>
+              <r_difficulty_feeding/>
+              <r_vomit/>
+              <r_drowsy/>
+              <r_stiff/>
+              <r_yellow_skin/>
+              <r_fever/>
+              <r_blue_skin/>
+            </r_babies_repeat>
+            <r_referrals/>
+            <r_refer_clinic_immediately/>
+            <r_refer_danger_sign/>
+            <r_mom_alive_unwell/>
+            <r_who_schedule_note/>
+            <r_pnc_schedule_note/>
+            <r_follow_up_tasks/>
+            <r_following_tasks/>
+            <r_fup_danger_sign/>
+            <r_fup_danger_sign_baby/>
+            <custom_translations>
+              <delivery_place_label_translator/>
+              <delivery_place_label/>
+            </custom_translations>
+          </summary>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </delivery_plus_plus>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="life_conditions_woman">
+        <root>
+          <item>
+            <itextId>static_instance-life_conditions_woman-0</itextId>
+            <name>alive_well</name>
+          </item>
+          <item>
+            <itextId>static_instance-life_conditions_woman-1</itextId>
+            <name>alive_unwell</name>
+          </item>
+          <item>
+            <itextId>static_instance-life_conditions_woman-2</itextId>
+            <name>deceased</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="places">
+        <root>
+          <item>
+            <itextId>static_instance-places-0</itextId>
+            <name>health_facility</name>
+          </item>
+          <item>
+            <itextId>static_instance-places-1</itextId>
+            <name>home</name>
+          </item>
+          <item>
+            <itextId>static_instance-places-2</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="modes">
+        <root>
+          <item>
+            <itextId>static_instance-modes-0</itextId>
+            <name>vaginal</name>
+          </item>
+          <item>
+            <itextId>static_instance-modes-1</itextId>
+            <name>cesarean</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="conductors">
+        <root>
+          <item>
+            <itextId>static_instance-conductors-0</itextId>
+            <name>skilled</name>
+          </item>
+          <item>
+            <itextId>static_instance-conductors-1</itextId>
+            <name>traditional</name>
+          </item>
+          <item>
+            <itextId>static_instance-conductors-2</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="more_babies">
+        <root>
+          <item>
+            <itextId>static_instance-more_babies-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-more_babies-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="life_conditions_baby">
+        <root>
+          <item>
+            <itextId>static_instance-life_conditions_baby-0</itextId>
+            <name>alive_well</name>
+          </item>
+          <item>
+            <itextId>static_instance-life_conditions_baby-1</itextId>
+            <name>alive_unwell</name>
+          </item>
+          <item>
+            <itextId>static_instance-life_conditions_baby-2</itextId>
+            <name>deceased</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="male_female">
+        <root>
+          <item>
+            <itextId>static_instance-male_female-0</itextId>
+            <name>male</name>
+          </item>
+          <item>
+            <itextId>static_instance-male_female-1</itextId>
+            <name>female</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="vaccines">
+        <root>
+          <item>
+            <itextId>static_instance-vaccines-0</itextId>
+            <name>bcg_only</name>
+          </item>
+          <item>
+            <itextId>static_instance-vaccines-1</itextId>
+            <name>birth_polio_only</name>
+          </item>
+          <item>
+            <itextId>static_instance-vaccines-2</itextId>
+            <name>bcg_and_birth_polio</name>
+          </item>
+          <item>
+            <itextId>static_instance-vaccines-3</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="knows_weight">
+        <root>
+          <item>
+            <itextId>static_instance-knows_weight-0</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>static_instance-knows_weight-1</itextId>
+            <name>yes</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="knows_length">
+        <root>
+          <item>
+            <itextId>static_instance-knows_length-0</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>static_instance-knows_length-1</itextId>
+            <name>yes</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="pnc_visits">
+        <root>
+          <item>
+            <itextId>static_instance-pnc_visits-0</itextId>
+            <count>0</count>
+            <name>within_24_hrs</name>
+          </item>
+          <item>
+            <itextId>static_instance-pnc_visits-1</itextId>
+            <count>3</count>
+            <name>3_days</name>
+          </item>
+          <item>
+            <itextId>static_instance-pnc_visits-2</itextId>
+            <count>7</count>
+            <name>7_days</name>
+          </item>
+          <item>
+            <itextId>static_instance-pnc_visits-3</itextId>
+            <count>42</count>
+            <name>6_weeks</name>
+          </item>
+          <item>
+            <itextId>static_instance-pnc_visits-4</itextId>
+            <count>0</count>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/delivery_plus_plus/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/delivery_plus_plus/inputs/source" type="string"/>
+      <bind nodeset="/delivery_plus_plus/inputs/source_id" type="string"/>
+      <bind nodeset="/delivery_plus_plus/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/delivery_plus_plus/inputs/contact/name" type="string"/>
+      <bind nodeset="/delivery_plus_plus/inputs/contact/short_name" type="string"/>
+      <bind nodeset="/delivery_plus_plus/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/delivery_plus_plus/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/delivery_plus_plus/inputs/contact/sex" type="string"/>
+      <bind nodeset="/delivery_plus_plus/patient_short_name_start" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/delivery_plus_plus/patient_age_in_years" type="string" calculate="floor( difference-in-months( ../inputs/contact/date_of_birth, today() ) div 12 )"/>
+      <bind nodeset="/delivery_plus_plus/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/delivery_plus_plus/r_baby_danger_sign_present_joined" type="string" calculate="join(', ',  /delivery_plus_plus/baby_repeat/baby_danger_signs/r_baby_danger_sign_present )"/>
+      <bind nodeset="/delivery_plus_plus/r_baby_danger_sign_present_any" type="string" calculate="if(contains(../r_baby_danger_sign_present_joined, 'yes'), 'yes', 'no')"/>
+      <bind nodeset="/delivery_plus_plus/babies_delivered_num" type="string" calculate="count( /delivery_plus_plus/baby_repeat )"/>
+      <bind nodeset="/delivery_plus_plus/woman/condition/woman_outcome" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check" relevant="selected(../condition/woman_outcome, 'alive_well') or selected(../condition/woman_outcome, 'alive_unwell')"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/pnc_danger_sign_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/pnc_danger_sign_table" type="select1"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/fever" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/severe_headache" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/vaginal_bleeding" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/vaginal_discharge" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/convulsion" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/woman/pnc_danger_sign_check/r_pnc_danger_sign_present" type="string" calculate="if(selected(../fever, 'yes') or
+selected(../severe_headache, 'yes') or
+selected(../vaginal_bleeding, 'yes') or
+selected(../vaginal_discharge, 'yes') or
+selected(../convulsion, 'yes'), 'yes', 'no')"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome" relevant="not(selected(../woman/condition/woman_outcome, 'deceased'))"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_date" type="date" required="true()" jr:constraintMsg="Date cannot be in the future and older than a month from today." constraint=". &lt;= now() and difference-in-months( ., today() ) &lt; 1"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_place" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_place_other" type="string" required="true()" jr:constraintMsg="Maximum 100 characters allowed." relevant="../delivery_place = 'other'" constraint="string-length(.) &lt;= 100"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_mode" type="select1" required="true()" relevant="../delivery_place = 'health_facility'"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_conductor" type="select1" required="true()" relevant="../delivery_place = 'home' or ../delivery_place = 'other'"/>
+      <bind nodeset="/delivery_plus_plus/delivery_outcome/delivery_conductor_other" type="string" required="true()" jr:constraintMsg="Maximum 100 characters allowed." relevant="../delivery_conductor = 'other'" constraint="string-length(.) &lt;= 100"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat_count" type="string" readonly="true()" calculate="if( /delivery_plus_plus/babies_delivered_num  = 0 or  /delivery_plus_plus/baby_repeat [position()= /delivery_plus_plus/babies_delivered_num ]/baby_danger_signs/more_babies = 'yes',  /delivery_plus_plus/babies_delivered_num  + 1,  /delivery_plus_plus/babies_delivered_num )"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/baby_condition" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/baby_name" type="string" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/baby_sex" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_weight_know" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_weight" type="int" required="true()" jr:constraintMsg="Should be between 1500 grams and 5000 grams." relevant="selected(../birth_weight_know, 'yes')" constraint=". &gt;= 1500 and . &lt;= 5000"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_length_know" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/birth_length" type="decimal" required="true()" jr:constraintMsg="Should be between 35.6 cms and 70 cms." relevant="selected(../birth_length_know, 'yes')" constraint=". &gt;= 35.6 and . &lt;= 70"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/vaccines_received" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/imm_counsel_note" readonly="true()" type="string" relevant="selected(../vaccines_received, 'none')"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/breastfeeding" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_details/breastfed_within_1_hour" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/baby_danger_sign_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/baby_danger_sign_table" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/infected_umbilical_cord" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/b_convulsion" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/difficulty_feeding" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/vomit" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/drowsy" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/stiff" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/yellow_skin" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/b_fever" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/blue_skin" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/r_baby_danger_sign_present" type="string" calculate="if(selected(../infected_umbilical_cord, 'yes') or
+selected(../b_convulsion, 'yes') or
+selected(../difficulty_feeding, 'yes') or
+selected(../vomit, 'yes') or
+selected(../drowsy, 'yes') or
+selected(../stiff, 'yes') or
+selected(../yellow_skin, 'yes') or
+selected(../b_fever, 'yes') or
+selected(../blue_skin, 'yes'), 'yes', 'no')"/>
+      <bind nodeset="/delivery_plus_plus/baby_repeat/baby_danger_signs/more_babies" type="select1" required="true()"/>
+      <bind nodeset="/delivery_plus_plus/safe_postnatal_practices" relevant=" /delivery_plus_plus/babies_delivered_num  != ''"/>
+      <bind nodeset="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_1" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_2" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_3" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_4" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_5" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/pnc_visits" relevant="selected(../woman/condition/woman_outcome, 'alive_well') or
+selected(../woman/condition/woman_outcome, 'alive_unwell') or
+ /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
+      <bind nodeset="/delivery_plus_plus/pnc_visits/who_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/pnc_visits/pnc_visits_attended" type="select" constraint="not(selected(.,'none')) or count-selected(.) &lt; 2"/>
+      <bind nodeset="/delivery_plus_plus/pnc_visits/pnc_visits_additional" type="int" jr:constraintMsg="Must be between 0 and 6." constraint=". &gt;=0 and . &lt;= 6"/>
+      <bind nodeset="/delivery_plus_plus/pnc_visits/days" type="string" calculate="floor(decimal-date-time(today()) - decimal-date-time( /delivery_plus_plus/delivery_outcome/delivery_date ))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_submit_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_summary_details" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_patient_details" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pregnancy_outcome" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_woman_condition" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_condition_well" readonly="true()" type="string" relevant="selected(../../woman/condition/woman_outcome, 'alive_well')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_condition_unwell" readonly="true()" type="string" relevant="selected(../../woman/condition/woman_outcome, 'alive_unwell')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_delivery_details" readonly="true()" type="string" relevant="not(selected(../../woman/condition/woman_outcome, 'deceased'))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_delivery_date" readonly="true()" type="string" relevant=" /delivery_plus_plus/delivery_outcome/delivery_date  != ''"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_delivery_place" readonly="true()" type="string" relevant=" /delivery_plus_plus/delivery_outcome/delivery_place  != ''"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_delivered_num" readonly="true()" type="string" relevant=" /delivery_plus_plus/babies_delivered_num  != ''"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_danger_signs" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_mom_fever" readonly="true()" type="string" relevant="selected(../../woman/pnc_danger_sign_check/fever, 'yes')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_mom_severe_headache" readonly="true()" type="string" relevant="selected(../../woman/pnc_danger_sign_check/severe_headache, 'yes')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_mom_vaginal_bleeding" readonly="true()" type="string" relevant="selected(../../woman/pnc_danger_sign_check/vaginal_bleeding, 'yes')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_mom_vaginal_discharge" readonly="true()" type="string" relevant="selected(../../woman/pnc_danger_sign_check/vaginal_discharge, 'yes')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_mom_convulsion" readonly="true()" type="string" relevant="selected(../../woman/pnc_danger_sign_check/convulsion, 'yes')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visits" readonly="true()" type="string" relevant="selected(../../woman/condition/woman_outcome, 'alive_well') or
+selected(../../woman/condition/woman_outcome, 'alive_unwell') or
+ /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visits_completed" readonly="true()" type="string" relevant="selected(../../woman/condition/woman_outcome, 'alive_well') or
+selected(../../woman/condition/woman_outcome, 'alive_unwell') or
+ /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visit_24hrs" readonly="true()" type="string" relevant="selected(../../pnc_visits/pnc_visits_attended, 'within_24_hrs')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visit_3days" readonly="true()" type="string" relevant="selected(../../pnc_visits/pnc_visits_attended, '3_days')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visit_7days" readonly="true()" type="string" relevant="selected(../../pnc_visits/pnc_visits_attended, '7_days')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visit_6weeks" readonly="true()" type="string" relevant="selected(../../pnc_visits/pnc_visits_attended, '6_weeks')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visit_none" readonly="true()" type="string" relevant="selected(../../pnc_visits/pnc_visits_attended, 'none')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_visits_add" readonly="true()" type="string" relevant="../../pnc_visits/pnc_visits_additional != ''"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat_count" type="string" readonly="true()" calculate=" /delivery_plus_plus/babies_delivered_num "/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_name" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_details/baby_name ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_length" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_details/birth_length ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_weight" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_details/birth_weight ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_danger_signs" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/r_baby_danger_sign_present ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_infected_umbilical_cord" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/infected_umbilical_cord ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_convulsion" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/b_convulsion ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_difficulty_feeding" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/difficulty_feeding ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_vomit" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/vomit ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_drowsy" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/drowsy ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_stiff" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/stiff ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_yellow_skin" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/yellow_skin ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_fever" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/b_fever ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/current_blue_skin" type="string" calculate="indexed-repeat( /delivery_plus_plus/baby_repeat/baby_danger_signs/blue_skin ,  /delivery_plus_plus/baby_repeat , position(..))"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_baby_header" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_baby_length" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_baby_weight" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_danger_signs" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_danger_signs  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_infected_umbilical_cord" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_infected_umbilical_cord  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_convulsion" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_convulsion  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_difficulty_feeding" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_difficulty_feeding  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_vomit" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_vomit  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_drowsy" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_drowsy  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_stiff" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_stiff  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_yellow_skin" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_yellow_skin  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_fever" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_fever  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_babies_repeat/r_blue_skin" readonly="true()" type="string" relevant=" /delivery_plus_plus/summary/r_babies_repeat/current_blue_skin  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_referrals" readonly="true()" type="string" relevant="not(selected(../../woman/condition/woman_outcome, 'deceased')) or
+ /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_refer_clinic_immediately" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes' or
+selected(../../woman/condition/woman_outcome, 'alive_unwell')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_refer_danger_sign" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_mom_alive_unwell" readonly="true()" type="string" relevant="selected(../../woman/condition/woman_outcome, 'alive_unwell')"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_who_schedule_note" readonly="true()" type="string" relevant="not(selected(../../woman/condition/woman_outcome, 'deceased')) or
+ /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_pnc_schedule_note" readonly="true()" type="string" relevant="not(selected(../../woman/condition/woman_outcome, 'deceased')) or
+ /delivery_plus_plus/babies_delivered_num  &gt; 0"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_follow_up_tasks" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_following_tasks" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_fup_danger_sign" readonly="true()" type="string" relevant="../../woman/pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/r_fup_danger_sign_baby" readonly="true()" type="string" relevant=" /delivery_plus_plus/r_baby_danger_sign_present_any  = 'yes'"/>
+      <bind nodeset="/delivery_plus_plus/summary/custom_translations/delivery_place_label_translator" type="select1" calculate=" /delivery_plus_plus/delivery_outcome/delivery_place "/>
+      <bind nodeset="/delivery_plus_plus/summary/custom_translations/delivery_place_label" type="string" calculate="jr:choice-name( /delivery_plus_plus/summary/custom_translations/delivery_place_label_translator ,' /delivery_plus_plus/summary/custom_translations/delivery_place_label_translator ')"/>
+      <bind nodeset="/delivery_plus_plus/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/delivery_plus_plus/inputs">
+      <label></label>
+      <group ref="/delivery_plus_plus/inputs/contact">
+        <input ref="/delivery_plus_plus/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/delivery_plus_plus/woman">
+      <label></label>
+      <group ref="/delivery_plus_plus/woman/condition">
+        <label><output value=" /delivery_plus_plus/patient_short_name_start "/>'s Condition</label>
+        <select1 appearance="likert" ref="/delivery_plus_plus/woman/condition/woman_outcome">
+          <label>What is the outcome for the woman?</label>
+          <item>
+            <label>Alive and well</label>
+            <value>alive_well</value>
+          </item>
+          <item>
+            <label>Alive and unwell</label>
+            <value>alive_unwell</value>
+          </item>
+          <item>
+            <label>Deceased</label>
+            <value>deceased</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/delivery_plus_plus/woman/pnc_danger_sign_check">
+        <label>Postnatal Danger Sign Check - _Woman_</label>
+        <input ref="/delivery_plus_plus/woman/pnc_danger_sign_check/pnc_danger_sign_note">
+          <label>Does the woman have any of the following danger signs?</label>
+        </input>
+        <select1 appearance="label" ref="/delivery_plus_plus/woman/pnc_danger_sign_check/pnc_danger_sign_table">
+          <label></label>
+          <item>
+            <label>Yes</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/delivery_plus_plus/woman/pnc_danger_sign_check/fever">
+          <label>Fever</label>
+          <item>
+            <label>Yes</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/delivery_plus_plus/woman/pnc_danger_sign_check/severe_headache">
+          <label>Severe headache</label>
+          <item>
+            <label>Yes</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/delivery_plus_plus/woman/pnc_danger_sign_check/vaginal_bleeding">
+          <label>Vaginal bleeding</label>
+          <item>
+            <label>Yes</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/delivery_plus_plus/woman/pnc_danger_sign_check/vaginal_discharge">
+          <label>Foul smelling vaginal discharge</label>
+          <item>
+            <label>Yes</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/delivery_plus_plus/woman/pnc_danger_sign_check/convulsion">
+          <label>Convulsions</label>
+          <item>
+            <label>Yes</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>no</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/delivery_plus_plus/delivery_outcome">
+      <label>Delivery Outcome</label>
+      <input ref="/delivery_plus_plus/delivery_outcome/delivery_date">
+        <label>Date of delivery</label>
+      </input>
+      <select1 appearance="columns-3" ref="/delivery_plus_plus/delivery_outcome/delivery_place">
+        <label>Where did delivery take place?</label>
+        <item>
+          <label>Health facility</label>
+          <value>health_facility</value>
+        </item>
+        <item>
+          <label>Home</label>
+          <value>home</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/delivery_plus_plus/delivery_outcome/delivery_place_other">
+        <label>Please specify other</label>
+      </input>
+      <select1 appearance="columns-3" ref="/delivery_plus_plus/delivery_outcome/delivery_mode">
+        <label>How did she deliver?</label>
+        <item>
+          <label>Vaginal</label>
+          <value>vaginal</value>
+        </item>
+        <item>
+          <label>Cesarean</label>
+          <value>cesarean</value>
+        </item>
+      </select1>
+      <select1 appearance="columns-3" ref="/delivery_plus_plus/delivery_outcome/delivery_conductor">
+        <label>Who conducted the delivery?</label>
+        <item>
+          <label>Skilled health care provider</label>
+          <value>skilled</value>
+        </item>
+        <item>
+          <label>Traditional birth attendant</label>
+          <value>traditional</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/delivery_plus_plus/delivery_outcome/delivery_conductor_other">
+        <label>Please specify other</label>
+      </input>
+    </group>
+    <group ref="/delivery_plus_plus/baby_repeat">
+      <label></label>
+      <repeat nodeset="/delivery_plus_plus/baby_repeat" jr:count=" /delivery_plus_plus/baby_repeat_count ">
+        <group appearance="field-list" ref="/delivery_plus_plus/baby_repeat/baby_details">
+          <label></label>
+          <select1 appearance="likert" ref="/delivery_plus_plus/baby_repeat/baby_details/baby_condition">
+            <label>What is the condition of baby?</label>
+            <item>
+              <label>Alive and well</label>
+              <value>alive_well</value>
+            </item>
+            <item>
+              <label>Alive and unwell</label>
+              <value>alive_unwell</value>
+            </item>
+            <item>
+              <label>Deceased</label>
+              <value>deceased</value>
+            </item>
+          </select1>
+          <input ref="/delivery_plus_plus/baby_repeat/baby_details/baby_name">
+            <label>Name</label>
+          </input>
+          <select1 ref="/delivery_plus_plus/baby_repeat/baby_details/baby_sex">
+            <label>Sex</label>
+            <item>
+              <label>Male</label>
+              <value>male</value>
+            </item>
+            <item>
+              <label>Female</label>
+              <value>female</value>
+            </item>
+          </select1>
+          <select1 ref="/delivery_plus_plus/baby_repeat/baby_details/birth_weight_know">
+            <label>Birth weight</label>
+            <item>
+              <label>I don't know</label>
+              <value>no</value>
+            </item>
+            <item>
+              <label>Weight in grams</label>
+              <value>yes</value>
+            </item>
+          </select1>
+          <range appearance="no-ticks" ref="/delivery_plus_plus/baby_repeat/baby_details/birth_weight" start="1500" end="5000" step="10">
+            <label></label>
+          </range>
+          <select1 ref="/delivery_plus_plus/baby_repeat/baby_details/birth_length_know">
+            <label>Birth length</label>
+            <item>
+              <label>I don't know</label>
+              <value>no</value>
+            </item>
+            <item>
+              <label>Length in cm</label>
+              <value>yes</value>
+            </item>
+          </select1>
+          <range appearance="vertical" ref="/delivery_plus_plus/baby_repeat/baby_details/birth_length" start="35.6" end="70" step="0.1">
+            <label></label>
+          </range>
+          <select1 ref="/delivery_plus_plus/baby_repeat/baby_details/vaccines_received">
+            <label>What vaccines have they received?</label>
+            <hint>Select one.</hint>
+            <item>
+              <label>BCG only</label>
+              <value>bcg_only</value>
+            </item>
+            <item>
+              <label>Birth Polio only</label>
+              <value>birth_polio_only</value>
+            </item>
+            <item>
+              <label>BCG and Birth Polio</label>
+              <value>bcg_and_birth_polio</value>
+            </item>
+            <item>
+              <label>None</label>
+              <value>none</value>
+            </item>
+          </select1>
+          <input ref="/delivery_plus_plus/baby_repeat/baby_details/imm_counsel_note">
+            <label>Please counsel the family and refer the child to the nearest health center where the baby can be immunized.</label>
+          </input>
+          <select1 ref="/delivery_plus_plus/baby_repeat/baby_details/breastfeeding">
+            <label>Is the child exclusively breastfeeding?</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 ref="/delivery_plus_plus/baby_repeat/baby_details/breastfed_within_1_hour">
+            <label>Were they initiated on breastfeeding within on hour of delivery?</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+        </group>
+        <group appearance="field-list" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs">
+          <label></label>
+          <input ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/baby_danger_sign_note">
+            <label>Does the baby have any of the following danger signs?</label>
+          </input>
+          <select1 appearance="label" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/baby_danger_sign_table">
+            <label></label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/infected_umbilical_cord">
+            <label>Infected umbilical cord</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/b_convulsion">
+            <label>Convulsions</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/difficulty_feeding">
+            <label>Difficulty feeding or drinking</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/vomit">
+            <label>Vomits everything</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/drowsy">
+            <label>Drowsy or unconscious</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/stiff">
+            <label>Body stiffness</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/yellow_skin">
+            <label>Yellow skin color</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/b_fever">
+            <label>Fever</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="list-nolabel" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/blue_skin">
+            <label>Blue skin color (hypothermia)</label>
+            <item>
+              <label>Yes</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>No</label>
+              <value>no</value>
+            </item>
+          </select1>
+          <select1 appearance="columns-pack no-buttons" ref="/delivery_plus_plus/baby_repeat/baby_danger_signs/more_babies">
+            <label>Are there any other babies to record?</label>
+            <item>
+              <label ref="jr:itext('/delivery_plus_plus/baby_repeat/baby_danger_signs/more_babies/yes:label')"/>
+              <value>yes</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/delivery_plus_plus/baby_repeat/baby_danger_signs/more_babies/no:label')"/>
+              <value>no</value>
+            </item>
+          </select1>
+        </group>
+      </repeat>
+    </group>
+    <group appearance="field-list summary" ref="/delivery_plus_plus/safe_postnatal_practices">
+      <label>Safe Postnatal Practices</label>
+      <input ref="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_1">
+        <label>Lactating mothers need to eat more than usual to feed their baby well. Ask the woman to eat a variety of foods, especially extra fluids, fruits, and vegetables.</label>
+      </input>
+      <input ref="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_2">
+        <label>For the first 6 months, give the baby breastmilk only.</label>
+      </input>
+      <input ref="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_3">
+        <label>To keep the baby warm, use kangaroo mother care, wrap the baby with clothes and cover the head, and keep the baby in a warm room.</label>
+      </input>
+      <input ref="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_4">
+        <label>Always sleep with the baby under a long-lasting insecticide treated net (LLIN).</label>
+      </input>
+      <input ref="/delivery_plus_plus/safe_postnatal_practices/safe_postnatal_practice_5">
+        <label>Keep the baby's umbilical cord clean and dry.</label>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/delivery_plus_plus/pnc_visits">
+      <label>PNC Visits</label>
+      <input ref="/delivery_plus_plus/pnc_visits/who_note">
+        <label>The WHO recommends PNC visits within 24 hours and on 3 days, 7 days, and 6 weeks from date of delivery.</label>
+      </input>
+      <select ref="/delivery_plus_plus/pnc_visits/pnc_visits_attended">
+        <label>Which PNC visits have taken place so far?</label>
+        <itemset nodeset="instance('pnc_visits')/root/item[count &lt;=  /delivery_plus_plus/pnc_visits/days ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select>
+      <input ref="/delivery_plus_plus/pnc_visits/pnc_visits_additional">
+        <label>Any additional PNC visits, please report the number of visits below to be counted in the total.</label>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/delivery_plus_plus/summary">
+      <label></label>
+      <input ref="/delivery_plus_plus/summary/r_submit_note">
+        <label>&lt;h4 style="text-align:center;"&gt;To finish, be sure to click the Submit button.&lt;/h4&gt;</label>
+      </input>
+      <input appearance="h1 yellow" ref="/delivery_plus_plus/summary/r_summary_details">
+        <label>Patient&lt;i class="fa fa-user"&gt;&lt;/i&gt;</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_patient_details">
+        <label>&lt;h2 style=&quot;text-align:center;margin-bottom:0px;&quot;&gt;<output value=" /delivery_plus_plus/patient_name "/>&lt;/h2&gt; &lt;p style=&quot;text-align:center;&quot;&gt;<output value=" /delivery_plus_plus/patient_age_in_years "/> years old&lt;/p&gt;</label>
+      </input>
+      <input appearance="h1 yellow" ref="/delivery_plus_plus/summary/r_pregnancy_outcome">
+        <label>Pregnancy Outcome&lt;i class="fa fa-user"&gt;&lt;/i&gt;</label>
+      </input>
+      <input appearance="h3 blue center underline" ref="/delivery_plus_plus/summary/r_woman_condition">
+        <label>Woman's Condition</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_condition_well">
+        <label>Alive and well</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_condition_unwell">
+        <label>Alive and unwell</label>
+      </input>
+      <input appearance="h3 blue center underline" ref="/delivery_plus_plus/summary/r_delivery_details">
+        <label>Delivery Details</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_delivery_date">
+        <label>Date of Delivery: <output value=" /delivery_plus_plus/delivery_outcome/delivery_date "/></label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_delivery_place">
+        <label>Place of Delivery: <output value=" /delivery_plus_plus/summary/custom_translations/delivery_place_label "/></label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_delivered_num">
+        <label>Number of babies delivered: <output value=" /delivery_plus_plus/babies_delivered_num "/></label>
+      </input>
+      <input appearance="h3 blue center underline" ref="/delivery_plus_plus/summary/r_danger_signs">
+        <label>Danger signs</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_mom_fever">
+        <label>Fever</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_mom_severe_headache">
+        <label>Severe headache</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_mom_vaginal_bleeding">
+        <label>Vaginal bleeding</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_mom_vaginal_discharge">
+        <label>Foul smelling vaginal discharge</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_mom_convulsion">
+        <label>Convulsions</label>
+      </input>
+      <input appearance="h3 blue center underline" ref="/delivery_plus_plus/summary/r_pnc_visits">
+        <label>PNC Visits</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_pnc_visits_completed">
+        <label>PNC visits completed so far:</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_pnc_visit_24hrs">
+        <label>24 hours</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_pnc_visit_3days">
+        <label>3 days</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_pnc_visit_7days">
+        <label>7 days</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_pnc_visit_6weeks">
+        <label>6 weeks</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_pnc_visit_none">
+        <label>None</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_pnc_visits_add">
+        <label>Additional PNC visits completed: <output value=" /delivery_plus_plus/pnc_visits/pnc_visits_additional "/></label>
+      </input>
+      <input appearance="h1 blue" ref="/delivery_plus_plus/summary/r_babies">
+        <label>Babies&lt;i class="fa fa-user-plus"&gt;&lt;/i&gt;</label>
+      </input>
+      <group ref="/delivery_plus_plus/summary/r_babies_repeat">
+        <label></label>
+        <repeat nodeset="/delivery_plus_plus/summary/r_babies_repeat" jr:count=" /delivery_plus_plus/summary/r_babies_repeat_count ">
+          <input appearance="h2 blue" ref="/delivery_plus_plus/summary/r_babies_repeat/r_baby_header">
+            <label><output value=" /delivery_plus_plus/summary/r_babies_repeat/current_name "/></label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_baby_length">
+            <label>Length: *<output value=" /delivery_plus_plus/summary/r_babies_repeat/current_length "/>*</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_baby_weight">
+            <label>Weight: *<output value=" /delivery_plus_plus/summary/r_babies_repeat/current_weight "/>*</label>
+          </input>
+          <input appearance="h3 blue" ref="/delivery_plus_plus/summary/r_babies_repeat/r_danger_signs">
+            <label>Danger signs</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_infected_umbilical_cord">
+            <label>Infected umbilical cord</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_convulsion">
+            <label>Convulsions</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_difficulty_feeding">
+            <label>Difficulty feeding or drinking</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_vomit">
+            <label>Vomits everything</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_drowsy">
+            <label>Drowsy or unconscious</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_stiff">
+            <label>Body stiffness</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_yellow_skin">
+            <label>Yellow skin color</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_fever">
+            <label>Fever</label>
+          </input>
+          <input appearance="li" ref="/delivery_plus_plus/summary/r_babies_repeat/r_blue_skin">
+            <label>Blue skin color (hypothermia)</label>
+          </input>
+        </repeat>
+      </group>
+      <input appearance="h1 lime" ref="/delivery_plus_plus/summary/r_referrals">
+        <label>Referrals&lt;I class="fa fa-hospital-o"&gt;&lt;/i&gt;</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_refer_clinic_immediately">
+        <label>Refer to clinic immediately for:</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_refer_danger_sign">
+        <label>Danger signs</label>
+      </input>
+      <input appearance="li" ref="/delivery_plus_plus/summary/r_mom_alive_unwell">
+        <label>Mom is alive and unwell</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_who_schedule_note">
+        <label>The WHO recommends routine PNC visits at 24 hours, 3 days, 7 days, and 6 weeks from the date of delivery.</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_pnc_schedule_note">
+        <label>Please continue to refer the woman to the health facility at the appropriate time.</label>
+      </input>
+      <input appearance="h1 green" ref="/delivery_plus_plus/summary/r_follow_up_tasks">
+        <label>Follow-up Tasks&lt;I class="fa fa-flag"&gt;&lt;/i&gt;</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_following_tasks">
+        <label>The following tasks will appear:</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_fup_danger_sign">
+        <label>Please conduct a danger sign follow-up for the mother in 3 days.</label>
+      </input>
+      <input ref="/delivery_plus_plus/summary/r_fup_danger_sign_baby">
+        <label>Please conduct a danger sign follow-up for the baby in 3 days.</label>
+      </input>
+      <group appearance="hidden" ref="/delivery_plus_plus/summary/custom_translations">
+        <label></label>
+        <select1 ref="/delivery_plus_plus/summary/custom_translations/delivery_place_label_translator">
+          <label></label>
+          <item>
+            <label>Health facility</label>
+            <value>health_facility</value>
+          </item>
+          <item>
+            <label>Home</label>
+            <value>home</value>
+          </item>
+          <item>
+            <label>Other</label>
+            <value>other</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+  </h:body>
+</h:html>

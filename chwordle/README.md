@@ -24,7 +24,7 @@ This form uses several xPath functions that are not available in versions of the
 - `once` (for randomizing the mystery word only once per game)
 - `count-non-empty` (for finding how many guesses have been made)
 
-For best results, deploy this form on a CHT instance running the [`6345-enketo-uplift`](https://github.com/medic/cht-core/tree/6345-enketo-uplift) branch.
+For best results, deploy this form on a CHT instance running CHT `< 4.0.0`.
 
 ## Known issues
 
